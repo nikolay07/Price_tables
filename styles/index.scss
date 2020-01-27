@@ -10,8 +10,7 @@ body {
 }
 
 .price-tables {
-    padding-top: 18px;
-    margin: 94px auto 118px auto;
+    margin: 112px auto 118px auto;
     display: flex;
     justify-content: center;
 }
@@ -26,6 +25,7 @@ body {
     margin-right: 15px;
     margin-left: 0;
     overflow: hidden;
+    position: relative;
     &:last-child {
         margin-right: 0;
     }
@@ -34,7 +34,6 @@ body {
         justify-content: center;
         align-items: center;
         margin: 30px auto 36px;
-        position: relative;
     }
     &__title {
         h2 {
@@ -51,22 +50,20 @@ body {
             line-height: 24px;
         }
     }
-    &__label {
-        .popular {
-            display: block;
-            position: absolute;
-            top: 1px;
-            left: 264px;
-            width: 147px;
-            height: 25px;
-            text-align: center;
-            text-transform: uppercase;
-            background-color: #DC3F45;
-            transform: rotate(45deg);
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 25px;
-        }
+    &__popular {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: -30px;
+        width: 147px;
+        height: 25px;
+        text-align: center;
+        text-transform: uppercase;
+        background-color: #DC3F45;
+        transform: rotate(45deg);
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 25px;
     }
     &__price {
         width: 380px;
@@ -138,6 +135,7 @@ body {
         font-size: 14px;
         line-height: 17px;
         color: #fff;
+        text-align: center;
     }
     &:nth-child(1) .price-card__order-btn {
         background-color: #5BB189;
