@@ -10,7 +10,8 @@ body {
 }
 
 .price-tables {
-    margin: 112px auto 118px auto;
+    margin: auto;
+    margin-top: 112px;
     display: flex;
     justify-content: center;
 }
@@ -126,7 +127,7 @@ body {
     &__order-btn {
         display: inline-block;
         margin: 37px 113px 42px 112px;
-        width: 155px;
+        width: 154.5px;
         height: 40px;
         background: #5BB189;
         border-radius: 20px;
