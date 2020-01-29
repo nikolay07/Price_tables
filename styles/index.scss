@@ -1,148 +1,158 @@
-@import 'variables.scss';
-* {
-    box-sizing: border-box;
-}
-
-body {
-    background-color: $color-black;
-    font-family: Montserrat;
-    color: $text-color-white;
-}
-
-.price-tables {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.price-card {
-    width: 380px;
-    height: 770px;
-    position: relative;
-    background-color: $color-dark;
-    display: inline-block;
-    box-shadow: 0px 6px 6px $shadow-color;
-    margin: 112px 15px 118px 0;
-    overflow: hidden;
-    position: relative;
-    &:last-child {
-        margin-right: 0;
+    @import 'variables.scss';
+    * {
+        box-sizing: border-box;
     }
-    &__title-block {
+    
+    body {
+        background-color: $color-black;
+        font-family: Montserrat;
+        color: $text-color-white;
+    }
+    
+    .price-tables {
+        margin: 0;
         display: flex;
         justify-content: center;
-        align-items: center;
-        margin: 30px auto 36px;
     }
-    &__title {
-        h2 {
-            margin: 0;
-            font-weight: 700;
-            text-align: center;
-            font-size: 35px;
-            line-height: 43px;
-        }
-        span {
-            display: block;
-            text-align: center;
-            font-size: 20px;
-            line-height: 24px;
-        }
-    }
-    &__popular {
-        display: block;
-        position: absolute;
-        top: 30px;
-        right: -30px;
-        width: 147px;
-        height: 25px;
-        text-align: center;
-        text-transform: uppercase;
-        background-color: $color-red;
-        transform: rotate(45deg);
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 25px;
-    }
-    &__price {
+    
+    .price-card {
         width: 380px;
-        height: 104px;
-        font-weight: 700;
-        font-size: 55px;
-        line-height: 104px;
-        text-align: center;
-        background: $color-green;
-    }
-    &:nth-child(1) .price-card__price {
-        background-color: $color-green;
-    }
-    &:nth-child(2) .price-card__price {
-        background-color: $color-blue;
-    }
-    &:nth-child(3) .price-card__price {
-        background-color: $color-orange;
-    }
-    &__description {
+        height: 770px;
+        position: relative;
+        background-color: $color-dark;
         display: inline-block;
-        text-align: center;
-        margin: 39px 26px 42px 26px;
-        font-weight: 300;
-        font-size: 15px;
-        line-height: 18px;
-    }
-    &__options-list {
-        font-weight: 300;
-        font-size: 15px;
-        line-height: 18px;
-        text-align: start;
-        margin-bottom: 42px;
-        list-style-position: inside;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-left: 0;
-    }
-    &:nth-child(1) .price-card__options-list {
-        list-style-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+25/verification-checkmark-symbol_green.png);
-    }
-    &:nth-child(2) .price-card__options-list {
-        list-style-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+25/verification-checkmark-symbol_blue.png);
-    }
-    &:nth-child(3) .price-card__options-list {
-        list-style-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+25/verification-checkmark-symbol_orange.png);
-    }
-    &__item {
-        width: 300px;
-        height: 50px;
-        line-height: 50px;
-        padding-left: 22.25px;
-        margin: 0;
-        &:nth-child(odd) {
-            width: 100%;
-            background: $color-selected;
-            mix-blend-mode: normal;
+        box-shadow: 0px 6px 6px $shadow-color;
+        margin: 112px 15px 118px 0;
+        overflow: hidden;
+        position: relative;
+        &__title-block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px auto 36px;
+        }
+        &__title {
+            h2 {
+                margin: 0;
+                font-weight: 700;
+                text-align: center;
+                font-size: 35px;
+                line-height: 43px;
+            }
+            span {
+                display: block;
+                text-align: center;
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+        &__popular {
+            display: block;
+            position: absolute;
+            top: 30px;
+            right: -30px;
+            width: 147px;
+            height: 25px;
+            text-align: center;
+            text-transform: uppercase;
+            background-color: $color-red;
+            transform: rotate(45deg);
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 25px;
+        }
+        &__price {
+            width: 380px;
+            height: 104px;
+            font-weight: 700;
+            font-size: 55px;
+            line-height: 104px;
+            text-align: center;
+            background: $color-green;
+        }
+        &:nth-child(1) {
+            .price-card {
+                &__price {
+                    background-color: $color-green;
+                }
+                &__options-list {
+                    list-style-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+25/verification-checkmark-symbol_green.png);
+                }
+                &__order-btn {
+                    background-color: $color-green;
+                }
+            }
+        }
+        &:nth-child(2) {
+            .price-card {
+                &__price {
+                    background-color: $color-blue;
+                }
+                &__options-list {
+                    list-style-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+25/verification-checkmark-symbol_blue.png);
+                }
+                &__order-btn {
+                    background-color: $color-blue;
+                }
+            }
+        }
+        &:nth-child(3) {
+            margin-right: 0;
+            .price-card {
+                &__price {
+                    background-color: $color-orange;
+                }
+                &__options-list {
+                    list-style-image: url(https://gromcode.s3.eu-central-1.amazonaws.com/front-end/html-css/lesson+25/verification-checkmark-symbol_orange.png);
+                }
+                &__order-btn {
+                    background-color: $color-orange;
+                }
+            }
+        }
+        &__description {
+            display: inline-block;
+            text-align: center;
+            margin: 39px 26px 42px 26px;
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 18px;
+        }
+        &__options-list {
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 18px;
+            text-align: start;
+            margin-bottom: 42px;
+            list-style-position: inside;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-left: 0;
+        }
+        &__item {
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 22.25px;
+            margin: 0;
+            &:nth-child(odd) {
+                width: 100%;
+                background: $color-selected;
+                mix-blend-mode: normal;
+            }
+        }
+        &__order-btn {
+            display: inline-block;
+            margin: 37px 113px 42px 112px;
+            width: 154.5px;
+            height: 40px;
+            background: $color-green;
+            border-radius: 20px;
+            border: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 17px;
+            color: $text-color-white;
+            text-align: center;
         }
     }
-    &__order-btn {
-        display: inline-block;
-        margin: 37px 113px 42px 112px;
-        width: 154.5px;
-        height: 40px;
-        background: $color-green;
-        border-radius: 20px;
-        border: none;
-        text-transform: uppercase;
-        font-size: 14px;
-        line-height: 17px;
-        color: $text-color-white;
-        text-align: center;
-    }
-    &:nth-child(1) .price-card__order-btn {
-        background-color: $color-green;
-    }
-    &:nth-child(2) .price-card__order-btn {
-        background-color: $color-blue;
-    }
-    &:nth-child(3) .price-card__order-btn {
-        background-color: $color-orange;
-    }
-}
